@@ -11,6 +11,9 @@ JAVA_OPTS="${JAVA_OPTS} -Dlogfile.path=target/log"
 JAVA_OPTS="${JAVA_OPTS} -XX:+CrashOnOutOfMemoryError"
 JAVA_OPTS="${JAVA_OPTS} -server"
 JAVA_OPTS="${JAVA_OPTS} --add-opens java.base/java.nio=ALL-UNNAMED"
+JAVA_OPTS="${JAVA_OPTS} -Xms640m -Xmx640m"
+JAVA_OPTS="${JAVA_OPTS} -XX:+UseConcMarkSweepGC"
+
 
 if [ ! -z "$JAVA_TIMEZONE" ]; then
     JAVA_OPTS="${JAVA_OPTS} -Duser.timezone=${JAVA_TIMEZONE}"
