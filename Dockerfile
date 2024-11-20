@@ -24,6 +24,8 @@ RUN yarn --frozen-lockfile
 
 ARG VERSION="1.0.0"
 
+RUN echo "MB_EDITION=$MB_EDITION, VERSION=${VERSION}"
+
 RUN INTERACTIVE=false CI=true MB_EDITION=$MB_EDITION bin/build.sh :version ${VERSION}
 
 # ###################
